@@ -6,12 +6,11 @@ import router from './router'
 
 //import "tailwindcss/tailwind.css"
 
-import './css/tailwind.css'
-import '@fortawesome/fontawesome-free/js/all.js';
-import './css/main.css'
-import './css/normalize.css'
- 
 
+import './css/bootstrap.min.css'
+import './css/minimal-icons-embedded.css'
+import './css/toastr.min.css'
+import './css/style.css'
 
 
 Vue.config.productionTip = false
