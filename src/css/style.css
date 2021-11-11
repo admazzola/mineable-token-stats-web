@@ -99,6 +99,10 @@ table td {
 	margin-left: -15px;
 }
 
+.icon-lg {
+	font-size:42px;
+}
+
 .big-info span.small-title,
 .big-info div.small-title-miner {
 	display: block;
@@ -138,9 +142,8 @@ span.small-title span.small {
 }
 
 .big-info .big-details-holder {
-	position: absolute;
-	top: 15px;
-	left: 99px;
+	text-align:center;
+	display: inline-block;
 }
 
 .big-info.chart {
