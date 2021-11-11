@@ -7,53 +7,48 @@
      <div class="row">
 
 
+       <StatsHolder
+       className="bestblock"
+       iconClass="icon-block"
+       title="best block"
+       :value="bestBlock"
+        /> 
 
-       <div class="col-xs-2 stat-holder"> 
-        <div class="big-info bestblock text-info">
-          
-           <div class="pull-left.icon-full-width">
+         <StatsHolder
+       className="uncleCount"
+       iconClass="icon-uncle"
+       title="uncles"
+       :value="uncleCount"
+        /> 
 
-             <i class="icon-block icon-lg"> </i>
+         <StatsHolder
+       className="lastBlock"
+       iconClass="icon-time"
+       title="last block"
+       :value="lastBlock"
+        /> 
 
-              <div class="big-details-holder">
-                <span class="small-title"> best block </span>
-                <span class="big-details"> # {{bestBlock}} </span>
+        <StatsHolder
+       className="avgBlockTime"
+       iconClass="icon-gas"
+       title="avg mint time"
+       :value="avgBlockTime"
+        /> 
 
-              </div>
-              <div class="clearfix"></div>
+         <StatsHolder
+       className="hashrate"
+       iconClass="icon-hashrate"
+       title="avg hashrate"
+       :value="avgHashrate"
+        /> 
 
-        
-           </div>
-
-
-        </div>  
-      </div>
-
-
-    <div class="col-xs-2 stat-holder"> 
-        <div class="big-info uncleCount text-info">
-          
-           <div class="pull-left.icon-full-width">
-
-             <i class="icon-uncle icon-lg"> </i>
-
-              <div class="big-details-holder">
-                <span class="small-title"> uncles </span>
-                <span class="big-details"> # {{uncleCount}} </span>
-
-              </div>
-              <div class="clearfix"></div>
-
-        
-           </div>
-
-
-        </div> 
-      </div>
-
-
-
-
+         <StatsHolder
+       className="difficulty"
+       iconClass="icon-difficulty"
+       title="difficulty"
+       :value="lastDifficulty"
+        /> 
+         
 
         
      </div> 
@@ -70,16 +65,20 @@
 
 
 <script>
- 
+ import StatsHolder from './components/stats-holder.vue'
 
 export default {
   name: 'Home',
   props: [],
-  components: { },
+  components: { StatsHolder },
   data() {
     return {
       bestBlock: 0,
-      uncleCount: 0
+      uncleCount: 0,
+      lastBlock: 0,
+      avgBlockTime:0,
+      avgHashrate: 0,
+      lastDifficulty: 0
       
     }
   },
